@@ -1,0 +1,259 @@
+a {
+    text-decoration: none
+}
+
+.yt4k-main-wrapper {
+    position: relative;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    display: inline-block
+}
+
+.yt4k-main-dl-btn {
+    display: inline-flex;
+    background-color: #2e972f;
+    color: #fff;
+    padding: 7px 12px;
+    min-width: 95px;
+    cursor: pointer;
+    text-align: left;
+    text-align: start;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2px;
+    margin: 7px 5px 5px 0;
+    font-weight: 500;
+    font-family: Roboto, Noto, sans-serif;
+    font-size: 14px;
+    transition: .2s;
+    text-transform: uppercase
+}
+
+.yt4k-main-dl-btn:hover {
+    background-color: #31a733
+}
+
+.yt4k-main-dl-btn>span:last-child {
+    border: 2px solid rgb(255 255 255 / 65%);
+    border-radius: 50%;
+    padding: 3px 4px 2px 3px;
+    margin-left: 7px;
+    font-size: 11px
+}
+
+.yt4k-wrapper {
+    position: absolute;
+    min-width: 320px;
+    z-index: 10
+}
+
+.yt4k-wrapper header {
+    background-color: #232323;
+    position: relative;
+    display: flex;
+    justify-content: space-between
+}
+
+.yt4k-head-label {
+    display: inline-block;
+    color: #fff;
+    padding: 15px;
+    text-transform: uppercase;
+    transition: .1s;
+    cursor: pointer;
+    font-weight: 700;
+    position: relative
+}
+
+.yt4k-head-label span {
+    opacity: .6
+}
+
+.yt4k-head-label.active span,
+.yt4k-head-label:hover span {
+    opacity: 1
+}
+
+.yt4k-head-label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom: 0 solid #ff2500;
+    width: 100%;
+    transition: .1s ease-in-out
+}
+
+.yt4k-head-label.active::after,
+.yt4k-head-label:hover::after {
+    border-bottom-width: 3px
+}
+
+.yt4k-head-label img {
+    width: 12px;
+    height: 12px;
+    margin-left: 3px
+}
+
+.yt4k-links-table {
+    display: none;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #fff;
+    box-shadow: rgb(17 17 26 / 5%) 0 2px 15px, rgb(17 17 26 / 5%) 0 2px 15px;
+    padding: 10px 5px 10px 10px;
+    max-height: 315px;
+    overflow: hidden auto;
+    border-radius: 0 0 3px 3px;
+    scrollbar-width: thin;
+    scrollbar-color: #c6ccd2 #fff
+}
+
+.yt4k-links-table.active {
+    display: block
+}
+
+.yt4k-links-table tr {
+    display: flex;
+    justify-content: space-between;
+    min-width: 290px
+}
+
+.yt4k-no-links {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: italic;
+    color: #404346
+}
+
+.yt4k-links-table td {
+    padding: 15px 0
+}
+
+.yt4k-quality {
+    text-transform: lowercase;
+    font-weight: 500;
+    min-width: 65px;
+    position: relative;
+    cursor: default
+}
+
+.yt4k-format {
+    text-align: center
+}
+
+.yt4k-size {
+    text-align: right;
+    position: relative;
+    min-width: 65px
+}
+
+.yt4k-span-size {
+    color: #929292;
+    font-weight: 500
+}
+
+.yt4k-btns {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    justify-content: flex-end;
+    align-items: center;
+    top: 50%;
+    left: 0;
+    background-color: #fff;
+    transition: .1s;
+    transform: translateY(-50%)
+}
+
+.yt4k-links-table tr:hover .yt4k-btns {
+    display: flex
+}
+
+.yt4k-btns .yt4k-dl-btn {
+    display: inline-block;
+    padding: 2px 10px 3px;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+    background-color: #2e972f
+}
+
+.yt4k-btns .yt4k-dl-btn:hover {
+    background-color: #31a733
+}
+
+.yt4k-dl-btn span {
+    color: #fff;
+    font-size: 11px;
+    text-transform: capitalize
+}
+
+.yt4k-btns img {
+    width: 12px;
+    height: 12px;
+    margin-left: 5px
+}
+
+.yt4k-hide {
+    opacity: 0;
+    visibility: hidden
+}
+
+.yt4k-show {
+    opacity: 1;
+    visibility: visible
+}
+
+.yt4k-hidden {
+    display: none
+}
+
+.yt4k-badge-hd {
+    position: relative;
+    left: 5px;
+    top: -5px;
+    font-size: 85%;
+    color: #f53942;
+    vertical-align: super;
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+.yt4k-badge-fps,
+.yt4k-badge-hdr {
+    background-color: #4e4f51;
+    color: #e0e0e0;
+    padding: 3px 4px;
+    font-size: 10px;
+    border-radius: 3px;
+    font-weight: 700;
+    cursor: default
+}
+
+.yt4k-links-table .yt4k-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.yt4k-badges>span {
+    margin-right: 5px
+}
+
+.yt4k-badges>span:last-child {
+    margin-right: 0
+}
+
+.yt4k-badges>span:hover {
+    background-color: #363636;
+    color: #fff
+}

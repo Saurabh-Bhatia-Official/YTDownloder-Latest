@@ -1,0 +1,53 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube 4K Downloader",
+    "version": "3.1.1",
+    "description": "Download YouTube Videos at (720p, 1080p, UHD, 60FPS, HDR, 4K, 8K) qualities in 1 click and download audio files at the best quality.",
+    "homepage_url": "https://youtube4kdownloader.com/",
+    "icons": {
+        "16": "assets/icons/i-16.png",
+        "32": "assets/icons/i-32.png",
+        "48": "assets/icons/i-48.png",
+        "64": "assets/icons/i-64.png",
+        "96": "assets/icons/i-96.png",
+        "128": "assets/icons/i-128.png",
+        "256": "assets/icons/i-256.png",
+        "512": "assets/icons/i-512.png"
+    },
+    "background": {
+        "background.service_worker": "background/bg.js"
+    },
+    "permissions": [
+        "tabs",
+        "declarativeNetRequest"
+    ],
+
+    "web_accessible_resources": [{
+    "resources": ["assets/*.png"],
+     "matches": ["<all_urls>"]
+  }],
+    "content_scripts": [{
+        "js": ["content_scripts/cs.js"],
+        "css": ["assets/ui.css"],
+        "matches": ["https://*.youtube.com/*"],
+        "run_at": "document_end"
+    }],
+    "action": {
+        "default_icon": {
+            "16": "assets/icons/i-16.png",
+            "32": "assets/icons/i-32.png",
+            "48": "assets/icons/i-48.png",
+            "64": "assets/icons/i-64.png",
+            "96": "assets/icons/i-96.png",
+            "128": "assets/icons/i-128.png",
+            "256": "assets/icons/i-256.png",
+            "512": "assets/icons/i-512.png"
+        },
+        "default_title": "YouTube 4K Downloader",
+        "browser_style": true
+    },
+     "host_permissions": [
+    "https://*.youtube.com/*",
+    "https://*.googlevideo.com/videoplayback*"
+  ]
+}
